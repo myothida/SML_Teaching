@@ -1,0 +1,2 @@
+# SML_Teaching
+This repository contains code to facilitate collaboration among students studying 'Supervised Machine Learning'. The exercises and teaching codes provided in this repo have been sourced from the book "Introduction to Supervised Machine Learning" available at https://leanpub.com/introductiontosupervisedmachinelearning. Feel free to explore and contribute to this repository as we work together to deepen our understanding of supervised machine learning concepts. Happy learning!
