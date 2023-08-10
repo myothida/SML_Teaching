@@ -1,6 +1,6 @@
 import numpy as np
 from flask import Flask, request
-from predict import make_prediction
+from condoPrice_predict import make_prediction
 
 app = Flask(__name__)
 
@@ -20,12 +20,11 @@ def index():
 def predict():
     data_json = request.get_json()
   
-    sepal_length_cm = data_json["sepal_length_cm"]
-    sepal_width_cm = data_json["sepal_width_cm"]
-    petal_length_cm = data_json["petal_length_cm"]
-    petal_width_cm = data_json["petal_width_cm"]
+    num_bedrooms = data_json["bedrooms"]
+    area_sq_cm = data_json["Area"]
+    num_bathrooms = data_json["bathrooms"]
 
-    data = np.array([[sepal_length_cm, sepal_width_cm, petal_length_cm, petal_width_cm]])
+    data = np.array([[num_bedrooms, area_sq_cm, num_bathrooms]])
     predictions = make_prediction(data)
   
     return str(predictions)

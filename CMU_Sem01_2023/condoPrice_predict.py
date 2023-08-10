@@ -1,6 +1,5 @@
 import joblib
 import pandas as pd
-from sklearn.pipeline import Pipeline
 
 model = joblib.load("CNX_BestModel.pkl")
 
@@ -10,7 +9,7 @@ def make_prediction(inputs):
     """
     inputs_df = pd.DataFrame(
         inputs,
-        columns=["sepal_length_cm", "sepal_width_cm", "petal_length_cm", "petal_width_cm"]
+        columns=["bedrooms", "Area", "bathrooms"]
         )
     predictions = model.predict(inputs_df)
   
